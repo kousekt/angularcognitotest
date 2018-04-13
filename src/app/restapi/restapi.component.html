@@ -1,0 +1,33 @@
+<style>
+  table {
+    border-collapse: separate;
+    border-spacing: 50px 0;
+  }
+
+  td {
+    padding: 10px 0;
+  }
+</style>
+<section>
+  <h2>Rest Api Output</h2>
+  <table align="center">
+    <thead>
+      <tr>        
+        <th>Name</th>
+        <th>Age</th>
+        <th>Cars</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let person of _data">        
+        <td>{{person.name}}</td>
+        <td>{{person.age}}</td>        
+        <td>
+          <div *ngFor="let car of person.cars">
+            {{car}}
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>
